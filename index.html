@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth is-loading">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vesper Launcher — Your Minecraft worlds, without the friction.</title>
+<meta name="description" content="A blazing-fast, lightweight Minecraft launcher. Hot launches as fast as 13 seconds, unified Modrinth &amp; CurseForge integration, and backend-powered mod syncing." />
+<meta name="theme-color" content="#0e1311" />
+<meta name="color-scheme" content="dark" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Vesper Launcher" />
+<meta property="og:title" content="Vesper Launcher — Your Minecraft worlds, without the friction." />
+<meta property="og:description" content="Hot launches as fast as 13 seconds. Unified Modrinth &amp; CurseForge. Ultra-lightweight architecture." />
+<meta property="og:image" content="https://vesperlauncher.github.io/assets/instances.webp" />
+<meta property="og:url" content="https://vesperlauncher.github.io/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://vesperlauncher.github.io/assets/instances.webp" />
+
+<link rel="canonical" href="https://vesperlauncher.github.io/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3ClinearGradient id='g' x1='0' y1='0' x2='.35' y2='1'%3E%3Cstop offset='0' stop-color='%238ed8ab'/%3E%3Cstop offset='.55' stop-color='%2363c795'/%3E%3Cstop offset='1' stop-color='%2345b47e'/%3E%3C/linearGradient%3E%3Crect width='128' height='128' rx='30' fill='url(%23g)'/%3E%3Cpath d='M64 28 100 64 64 100 28 64Z' fill='%2307100c'/%3E%3C/svg%3E" />
+
+<style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.\!visible{visibility:visible!important}.visible{visibility:visible}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.inset-x-0{left:0;right:0}.-bottom-8{bottom:-2rem}.bottom-3{bottom:.75rem}.left-1\/2{left:50%}.left-4{left:1rem}.left-\[12\%\]{left:12%}.right-4{right:1rem}.right-\[18\%\]{right:18%}.top-0{top:0}.top-12{top:3rem}.top-4{top:1rem}.top-6{top:1.5rem}.isolate{isolation:isolate}.-z-10{z-index:-10}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-14{margin-top:3.5rem}.mt-16{margin-top:4rem}.mt-2\.5{margin-top:.625rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:.375rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-14{height:3.5rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[17px\]{height:17px}.h-\[18px\]{height:18px}.h-\[19px\]{height:19px}.h-\[2px\]{height:2px}.h-\[70px\]{height:70px}.h-full{height:100%}.w-0{width:0}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-24{width:6rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-9{width:2.25rem}.w-\[17px\]{width:17px}.w-\[18px\]{width:18px}.w-\[19px\]{width:19px}.w-\[min\(92\%\2c 520px\)\]{width:min(92%,520px)}.w-full{width:100%}.w-max{width:-moz-max-content;width:max-content}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-\[16ch\]{max-width:16ch}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.flex-none{flex:none}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes marquee{0%{transform:translateX(0)}to{transform:translateX(-50%)}}.animate-marquee{animation:marquee 40s linear infinite}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:.375rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-9{gap:2.25rem}.gap-x-14{-moz-column-gap:3.5rem;column-gap:3.5rem}.gap-y-10{row-gap:2.5rem}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[10px\]{border-radius:10px}.rounded-\[11px\]{border-radius:11px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-t{border-top-width:1px}.border-emerald-500\/25{border-color:rgba(34,197,94,.25)}.border-emerald-500\/30{border-color:rgba(34,197,94,.3)}.border-emerald-500\/35{border-color:rgba(34,197,94,.35)}.border-emerald-500\/40{border-color:rgba(34,197,94,.4)}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.bg-black\/50{background-color:rgba(0,0,0,.5)}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(74 222 128/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(34 197 94/var(--tw-bg-opacity,1))}.bg-emerald-500\/10{background-color:rgba(34,197,94,.1)}.bg-emerald-500\/15{background-color:rgba(34,197,94,.15)}.bg-emerald-500\/\[\.08\]{background-color:rgba(34,197,94,.08)}.bg-moss-800\/40{background-color:rgba(19,26,23,.4)}.bg-moss-800\/60{background-color:rgba(19,26,23,.6)}.bg-moss-800\/70{background-color:rgba(19,26,23,.7)}.bg-moss-800\/80{background-color:rgba(19,26,23,.8)}.bg-moss-900\/60{background-color:rgba(14,19,17,.6)}.bg-moss-900\/80{background-color:rgba(14,19,17,.8)}.bg-obsidian{--tw-bg-opacity:1;background-color:rgb(14 19 17/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-white\/\[\.02\]{background-color:hsla(0,0%,100%,.02)}.bg-white\/\[\.03\]{background-color:hsla(0,0%,100%,.03)}.bg-white\/\[\.04\]{background-color:hsla(0,0%,100%,.04)}.bg-white\/\[\.05\]{background-color:hsla(0,0%,100%,.05)}.bg-white\/\[\.07\]{background-color:hsla(0,0%,100%,.07)}.bg-\[radial-gradient\(760px_420px_at_50\%_30\%\2c rgba\(9\2c 13\2c 11\2c \.86\)\2c transparent_72\%\)\]{background-image:radial-gradient(760px 420px at 50% 30%,rgba(9,13,11,.86),transparent 72%)}.bg-\[radial-gradient\(900px_520px_at_50\%_-6\%\2c rgba\(34\2c 197\2c 94\2c \.20\)\2c transparent_62\%\)\]{background-image:radial-gradient(900px 520px at 50% -6%,rgba(34,197,94,.2),transparent 62%)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-\[\#0d1a26\]{--tw-gradient-from:#0d1a26 var(--tw-gradient-from-position);--tw-gradient-to:rgba(13,26,38,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-400{--tw-gradient-from:#4ade80 var(--tw-gradient-from-position);--tw-gradient-to:rgba(74,222,128,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-500\/10{--tw-gradient-from:rgba(34,197,94,.1) var(--tw-gradient-from-position);--tw-gradient-to:rgba(34,197,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-500\/20{--tw-gradient-from:rgba(34,197,94,.2) var(--tw-gradient-from-position);--tw-gradient-to:rgba(34,197,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-moss-900{--tw-gradient-from:#0e1311 var(--tw-gradient-from-position);--tw-gradient-to:rgba(14,19,17,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-obsidian\/25{--tw-gradient-from:rgba(14,19,17,.25) var(--tw-gradient-from-position);--tw-gradient-to:rgba(14,19,17,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-\[\#12283a\]{--tw-gradient-to:rgba(18,40,58,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#12283a var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-emerald-500{--tw-gradient-to:rgba(34,197,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#22c55e var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-moss-800\/70{--tw-gradient-to:rgba(19,26,23,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(19,26,23,.7) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-obsidian\/60{--tw-gradient-to:rgba(14,19,17,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(14,19,17,.6) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),transparent var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-\[\#0e1f18\]{--tw-gradient-to:#0e1f18 var(--tw-gradient-to-position)}.to-emerald-600{--tw-gradient-to:#10b981 var(--tw-gradient-to-position)}.to-emerald-600\/\[\.04\]{--tw-gradient-to:rgba(16,185,129,.04) var(--tw-gradient-to-position)}.to-moss-900{--tw-gradient-to:#0e1311 var(--tw-gradient-to-position)}.to-moss-900\/80{--tw-gradient-to:rgba(14,19,17,.8) var(--tw-gradient-to-position)}.to-obsidian{--tw-gradient-to:#0e1311 var(--tw-gradient-to-position)}.object-cover{-o-object-fit:cover;object-fit:cover}.object-\[50\%_62\%\]{-o-object-position:50% 62%;object-position:50% 62%}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-8{padding-left:2rem;padding-right:2rem}.px-\[18px\]{padding-left:18px;padding-right:18px}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.pb-10{padding-bottom:2.5rem}.pb-24{padding-bottom:6rem}.pb-4{padding-bottom:1rem}.pr-10{padding-right:2.5rem}.pt-1{padding-top:.25rem}.pt-16{padding-top:4rem}.pt-8{padding-top:2rem}.pt-\[70px\]{padding-top:70px}.text-center{text-align:center}.font-sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[1\.28rem\]{font-size:1.28rem}.text-\[1\.9rem\]{font-size:1.9rem}.text-\[10\.5px\]{font-size:10.5px}.text-\[10px\]{font-size:10px}.text-\[11\.5px\]{font-size:11.5px}.text-\[11px\]{font-size:11px}.text-\[12\.5px\]{font-size:12.5px}.text-\[12px\]{font-size:12px}.text-\[13\.5px\]{font-size:13.5px}.text-\[13px\]{font-size:13px}.text-\[14\.5px\]{font-size:14.5px}.text-\[14px\]{font-size:14px}.text-\[15px\]{font-size:15px}.text-\[16\.5px\]{font-size:16.5px}.text-\[16px\]{font-size:16px}.text-\[17px\]{font-size:17px}.text-\[19px\]{font-size:19px}.text-\[clamp\(1rem\2c 2\.1vw\2c 1\.2rem\)\]{font-size:clamp(1rem,2.1vw,1.2rem)}.text-\[clamp\(2\.6rem\2c 7\.2vw\2c 5\.5rem\)\]{font-size:clamp(2.6rem,7.2vw,5.5rem)}.text-\[clamp\(2rem\2c 4\.4vw\2c 2\.9rem\)\]{font-size:clamp(2rem,4.4vw,2.9rem)}.text-\[clamp\(2rem\2c 4\.6vw\2c 3\.1rem\)\]{font-size:clamp(2rem,4.6vw,3.1rem)}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)}.leading-\[\.98\]{line-height:.98}.leading-\[1\.05\]{line-height:1.05}.leading-\[1\.06\]{line-height:1.06}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-\[\.14em\]{letter-spacing:.14em}.tracking-\[\.16em\]{letter-spacing:.16em}.tracking-\[\.22em\]{letter-spacing:.22em}.tracking-tight{letter-spacing:-.025em}.tracking-tightest{letter-spacing:-.055em}.tracking-wider{letter-spacing:.05em}.text-\[\#04170c\]{--tw-text-opacity:1;color:rgb(4 23 12/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(74 222 128/var(--tw-text-opacity,1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(34 197 94/var(--tw-text-opacity,1))}.text-emerald-500\/70{color:rgba(34,197,94,.7)}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-300\/90{color:rgba(203,213,225,.9)}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.opacity-25{opacity:.25}.opacity-70{opacity:.7}.opacity-\[\.85\]{opacity:.85}.shadow-\[0_0_14px_rgba\(34\2c 197\2c 94\2c \.7\)\]{--tw-shadow:0 0 14px rgba(34,197,94,.7);--tw-shadow-colored:0 0 14px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_20px_50px_-12px_rgba\(0\2c 0\2c 0\2c \.85\)\]{--tw-shadow:0 20px 50px -12px rgba(0,0,0,.85);--tw-shadow-colored:0 20px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_4px_18px_-5px_rgba\(76\2c 195\2c 138\2c \.7\)\]{--tw-shadow:0 4px 18px -5px rgba(76,195,138,.7);--tw-shadow-colored:0 4px 18px -5px var(--tw-shadow-color)}.shadow-\[0_4px_18px_-5px_rgba\(76\2c 195\2c 138\2c \.7\)\],.shadow-card{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-card{--tw-shadow:0 1px 2px rgba(0,0,0,.6),0 18px 48px -12px rgba(0,0,0,.6);--tw-shadow-colored:0 1px 2px var(--tw-shadow-color),0 18px 48px -12px var(--tw-shadow-color)}.shadow-glow{--tw-shadow:0 0 0 1px rgba(34,197,94,.28),0 10px 40px -8px rgba(34,197,94,.45);--tw-shadow-colored:0 0 0 1px var(--tw-shadow-color),0 10px 40px -8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.blur-\[1px\]{--tw-blur:blur(1px)}.blur-\[1px\],.drop-shadow-\[0_40px_90px_rgba\(0\2c 0\2c 0\2c \.75\)\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_40px_90px_rgba\(0\2c 0\2c 0\2c \.75\)\]{--tw-drop-shadow:drop-shadow(0 40px 90px rgba(0,0,0,.75))}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.\[mask-image\:radial-gradient\(ellipse_72\%_58\%_at_50\%_30\%\2c \#000\2c transparent_78\%\)\]{-webkit-mask-image:radial-gradient(ellipse 72% 58% at 50% 30%,#000,transparent 78%);mask-image:radial-gradient(ellipse 72% 58% at 50% 30%,#000,transparent 78%)}.\[text-shadow\:0_6px_50px_rgba\(0\2c 0\2c 0\2c \.55\)\]{text-shadow:0 6px 50px rgba(0,0,0,.55)}.after\:absolute:after{content:var(--tw-content);position:absolute}.after\:-bottom-1\.5:after{content:var(--tw-content);bottom:-.375rem}.after\:left-0:after{content:var(--tw-content);left:0}.after\:h-\[2px\]:after{content:var(--tw-content);height:2px}.after\:w-full:after{content:var(--tw-content);width:100%}.after\:origin-left:after{content:var(--tw-content);transform-origin:left}.after\:scale-x-0:after{content:var(--tw-content);--tw-scale-x:0;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.after\:bg-emerald-400:after{content:var(--tw-content);--tw-bg-opacity:1;background-color:rgb(74 222 128/var(--tw-bg-opacity,1))}.after\:transition-transform:after{content:var(--tw-content);transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem}.hover\:-translate-y-0\.5:hover,.hover\:-translate-y-1\.5:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1\.5:hover{--tw-translate-y:-0.375rem}.hover\:border-emerald-500\/35:hover{border-color:rgba(34,197,94,.35)}.hover\:border-emerald-500\/40:hover{border-color:rgba(34,197,94,.4)}.hover\:bg-emerald-500\/10:hover{background-color:rgba(34,197,94,.1)}.hover\:text-emerald-400:hover{--tw-text-opacity:1;color:rgb(74 222 128/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:shadow-\[0_28px_60px_-20px_rgba\(0\2c 0\2c 0\2c \.8\)\2c 0_0_50px_-18px_rgba\(34\2c 197\2c 94\2c \.45\)\]:hover{--tw-shadow:0 28px 60px -20px rgba(0,0,0,.8),0 0 50px -18px rgba(34,197,94,.45);--tw-shadow-colored:0 28px 60px -20px var(--tw-shadow-color),0 0 50px -18px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-glow-lg:hover{--tw-shadow:0 0 0 1px rgba(34,197,94,.32),0 24px 70px -12px rgba(34,197,94,.5);--tw-shadow-colored:0 0 0 1px var(--tw-shadow-color),0 24px 70px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:after\:scale-x-100:hover:after{content:var(--tw-content);--tw-scale-x:1}.group:hover .group-hover\:translate-x-1,.hover\:after\:scale-x-100:hover:after{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05}.group:hover .group-hover\:scale-105,.group:hover .group-hover\:scale-\[1\.03\]{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-\[1\.03\]{--tw-scale-x:1.03;--tw-scale-y:1.03}.group:hover .group-hover\:text-emerald-400{--tw-text-opacity:1;color:rgb(74 222 128/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:-bottom-10{bottom:-2.5rem}.sm\:mt-16{margin-top:4rem}.sm\:grid{display:grid}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:p-10{padding:2.5rem}.sm\:p-8{padding:2rem}.sm\:p-9{padding:2.25rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:py-32{padding-top:8rem;padding-bottom:8rem}.sm\:pt-24{padding-top:6rem}}@media (min-width:768px){.md\:flex{display:flex}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:1024px){.lg\:col-span-2{grid-column:span 2/span 2}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-\[1\.25fr_1fr\]{grid-template-columns:1.25fr 1fr}}</style>
+
+<style>
+  body{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:hidden; }
+  html.is-loading, html.is-loading body{ overflow:hidden; height:100%; }
+  ::selection{ background:#22c55e; color:#06130c; }
+
+  ::-webkit-scrollbar{ width:11px; height:11px; }
+  ::-webkit-scrollbar-track{ background:#0b0f0d; }
+  ::-webkit-scrollbar-thumb{ background:#26332c; border-radius:99px; border:3px solid #0b0f0d; }
+  ::-webkit-scrollbar-thumb:hover{ background:#3a4d42; }
+
+  :focus-visible{ outline:2px solid #22c55e; outline-offset:3px; border-radius:6px; }
+
+  /* ============ PRELOADER ============ */
+  #preloader{
+    position:fixed; inset:0; z-index:200;
+    display:grid; place-items:center;
+    background:radial-gradient(900px 600px at 50% 42%, #16211b 0%, #0b0f0d 62%, #080b09 100%);
+    transition:opacity .75s cubic-bezier(.4,0,.2,1), visibility .75s;
+  }
+  #preloader.done{ opacity:0; visibility:hidden; }
+  #preloader .pl-inner{ position:relative; display:grid; justify-items:center; gap:26px; }
+
+  .pl-logo{ position:relative; width:112px; height:112px; }
+  .pl-logo svg{ width:100%; height:100%; overflow:visible; }
+  .pl-stroke{
+    fill:none; stroke:#4cc38a; stroke-width:9;
+    stroke-linecap:square; stroke-linejoin:miter;
+    stroke-dasharray:204; stroke-dashoffset:204;
+    filter:drop-shadow(0 0 14px rgba(76,195,138,.85));
+    animation:plDraw 1.1s cubic-bezier(.65,0,.35,1) forwards,
+               plFade .45s ease-out 1.05s forwards;
+  }
+  @keyframes plDraw{ to{ stroke-dashoffset:0; } }
+  @keyframes plFade{ to{ opacity:0; } }
+  .pl-tile{ opacity:0; animation:plTile .7s ease-out .85s forwards; }
+  .pl-fill{ opacity:0; animation:plTile .5s ease-out 1.05s forwards; }
+  @keyframes plTile{ to{ opacity:1 } }
+
+  @keyframes plSpin{ to{ transform:rotate(360deg); } }
+
+  /* falling pixel blocks that snap into place under the mark */
+  .pl-blocks{ display:flex; gap:7px; }
+  .pl-blocks i{
+    display:block; width:11px; height:11px; background:#4cc38a; opacity:0;
+    box-shadow:0 0 12px rgba(76,195,138,.7);
+    animation:plDrop .62s cubic-bezier(.3,1.5,.5,1) forwards;
+  }
+  .pl-blocks i:nth-child(1){ animation-delay:.42s }
+  .pl-blocks i:nth-child(2){ animation-delay:.52s }
+  .pl-blocks i:nth-child(3){ animation-delay:.62s }
+  .pl-blocks i:nth-child(4){ animation-delay:.72s }
+  .pl-blocks i:nth-child(5){ animation-delay:.82s }
+  @keyframes plDrop{
+    0%{ opacity:0; transform:translateY(-26px) scale(.6) }
+    70%{ opacity:1; transform:translateY(3px) scale(1) }
+    100%{ opacity:.9; transform:translateY(0) scale(1) }
+  }
+
+  .pl-word{
+    font-weight:900; letter-spacing:.42em; font-size:15px; text-indent:.42em;
+    background:linear-gradient(100deg,#ffffff 10%,#8ff0b6 34%,#22c55e 50%,#ffffff 74%);
+    background-size:220% 100%;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:shimmer 2.6s linear infinite;
+  }
+  .pl-bar{ width:190px; height:3px; background:rgba(255,255,255,.08); border-radius:99px; overflow:hidden; }
+  .pl-bar i{
+    display:block; height:100%; width:0%;
+    background:linear-gradient(90deg,#4ade80,#10b981);
+    box-shadow:0 0 14px rgba(34,197,94,.8);
+    transition:width .28s ease;
+  }
+  .pl-tip{ font-size:11.5px; color:#4f5c54; letter-spacing:.02em; }
+
+  /* page reveal */
+  #app{ opacity:0; transform:translateY(14px); transition:opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1); }
+  #app.ready{ opacity:1; transform:none; }
+
+  /* ============ SURFACES ============ */
+  .glass{
+    background:rgba(16,22,19,.92);
+    border:1px solid rgba(255,255,255,.08);
+  }
+  .grad-text{ background:linear-gradient(100deg,#4ade80,#22c55e 42%,#10b981); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .grad-sheen{
+    background:linear-gradient(100deg,#ffffff 12%,#8ff0b6 38%,#22c55e 52%,#ffffff 78%);
+    background-size:200% 100%;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .glow-border{ position:relative; }
+  .glow-border::before{
+    content:''; position:absolute; inset:-1px; border-radius:inherit; padding:1px;
+    background:linear-gradient(135deg, rgba(34,197,94,.75), rgba(16,185,129,.18) 42%, rgba(255,255,255,.08) 70%, rgba(34,197,94,.55));
+    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude;
+    pointer-events:none;
+  }
+  .pixel-corners::before,.pixel-corners::after{ content:''; position:absolute; width:5px; height:5px; background:#22c55e; opacity:.85; }
+  .pixel-corners::before{ top:-2px; left:-2px; box-shadow:calc(100% + 4px) 0 0 #22c55e; }
+  .pixel-corners::after{ bottom:-2px; left:-2px; box-shadow:calc(100% + 4px) 0 0 #22c55e; }
+  .pixel-grid{
+    background-image:linear-gradient(to right, rgba(255,255,255,.045) 1px, transparent 1px),
+                     linear-gradient(to bottom, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size:16px 16px;
+  }
+  .spot{ position:relative; overflow:hidden; }
+  .spot::after{
+    content:''; position:absolute; inset:0; pointer-events:none; opacity:0; transition:opacity .35s ease;
+    background:radial-gradient(340px circle at var(--mx,50%) var(--my,50%), rgba(34,197,94,.16), transparent 62%);
+  }
+  .spot:hover::after{ opacity:1; }
+
+  .tip{ position:relative; }
+  .tip::after{
+    content:attr(data-tip); position:absolute; left:50%; bottom:calc(100% + 12px);
+    transform:translateX(-50%) translateY(4px);
+    padding:7px 11px; white-space:nowrap; font-size:11.5px; font-weight:700; color:#dcfce7;
+    background:#0b0f0d; border:2px solid #22c55e; box-shadow:4px 4px 0 rgba(0,0,0,.55);
+    opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease; z-index:60;
+  }
+  .tip:hover::after{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s cubic-bezier(.2,.7,.3,1); }
+  .reveal.in{ opacity:1; transform:none; }
+
+  .tilt-wrap{ perspective:1400px; }
+  .tilt{ transition:transform .35s cubic-bezier(.2,.7,.3,1); transform-style:preserve-3d; will-change:transform; }
+
+  .marquee-mask{
+    -webkit-mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+
+  /* ============ VOXEL FIGHTERS (PvP) ============ */
+  .arena{ position:relative; height:290px; overflow:hidden; }
+  .fighter{ position:absolute; bottom:64px; width:74px; }
+  .fighter .head{ width:38px; height:38px; margin:0 auto; border-radius:3px; position:relative; }
+  .fighter .head .eye{ position:absolute; top:16px; width:6px; height:6px; background:#1b2430; }
+  .fighter .head .eye.l{ left:8px } .fighter .head .eye.r{ right:8px }
+  .fighter .torso{ width:38px; height:46px; margin:1px auto 0; border-radius:3px; }
+  .fighter .legs{ display:flex; gap:2px; justify-content:center; margin-top:1px; }
+  .fighter .legs span{ width:18px; height:36px; border-radius:3px; background:linear-gradient(180deg,#3b5a8f,#263a5e); }
+  .fighter .arm{ position:absolute; top:42px; width:13px; height:40px; border-radius:3px; transform-origin:50% 6px; }
+  .fighter .sword{
+    position:absolute; width:7px; height:52px; border-radius:2px;
+    background:linear-gradient(180deg,#e5f2ff,#8fa5bd 62%,#5d3a1f 62%,#3b2412);
+    box-shadow:0 0 12px rgba(200,235,255,.35);
+  }
+
+  /* left fighter (emerald) */
+  #f1{ left:16%; animation:f1Move 4.4s cubic-bezier(.4,0,.2,1) infinite; }
+  #f1 .head{ background:linear-gradient(180deg,#c69672,#a97a56); }
+  #f1 .torso{ background:linear-gradient(180deg,#22c55e,#10b981); }
+  #f1 .arm{ background:linear-gradient(180deg,#22c55e,#0f9d58); }
+  #f1 .arm.back{ left:-8px; }
+  #f1 .arm.front{ right:-8px; animation:f1Swing 4.4s cubic-bezier(.4,0,.2,1) infinite; }
+  #f1 .sword{ right:-14px; top:52px; transform-origin:50% 90%; animation:f1Sword 4.4s cubic-bezier(.4,0,.2,1) infinite; }
+  @keyframes f1Move{
+    0%,28%   { transform:translateX(0) }
+    40%      { transform:translateX(58px) }
+    52%      { transform:translateX(46px) }
+    70%,100% { transform:translateX(0) }
+  }
+  @keyframes f1Swing{
+    0%,30%{ transform:rotate(8deg) } 40%{ transform:rotate(-96deg) }
+    54%{ transform:rotate(-40deg) } 68%,100%{ transform:rotate(8deg) }
+  }
+  @keyframes f1Sword{
+    0%,30%{ transform:rotate(12deg) } 40%{ transform:rotate(-92deg) }
+    54%{ transform:rotate(-36deg) } 68%,100%{ transform:rotate(12deg) }
+  }
+
+  /* right fighter (slate) */
+  #f2{ right:16%; animation:f2Move 4.4s cubic-bezier(.4,0,.2,1) infinite; }
+  #f2 .head{ background:linear-gradient(180deg,#b98c66,#96684a); }
+  #f2 .torso{ background:linear-gradient(180deg,#64748b,#475569); }
+  #f2 .arm{ background:linear-gradient(180deg,#64748b,#3f4b5c); }
+  #f2 .arm.back{ right:-8px; }
+  #f2 .arm.front{ left:-8px; animation:f2Block 4.4s cubic-bezier(.4,0,.2,1) infinite; }
+  #f2 .shieldblock{
+    position:absolute; left:-22px; top:48px; width:24px; height:34px; border-radius:3px;
+    background:linear-gradient(180deg,#9aa7b8,#5c6a7d); border:2px solid #2f3947;
+    animation:f2Shield 4.4s cubic-bezier(.4,0,.2,1) infinite;
+  }
+  @keyframes f2Move{
+    0%,36%{ transform:translateX(0) }
+    46%   { transform:translateX(34px) }
+    60%   { transform:translateX(12px) }
+    76%,100%{ transform:translateX(0) }
+  }
+  @keyframes f2Block{ 0%,32%{ transform:rotate(-6deg) } 44%{ transform:rotate(-52deg) } 62%,100%{ transform:rotate(-6deg) } }
+  @keyframes f2Shield{ 0%,32%{ transform:translateY(0) rotate(0) } 44%{ transform:translateY(-10px) rotate(-14deg) } 62%,100%{ transform:translateY(0) rotate(0) } }
+
+  .spark{
+    position:absolute; left:calc(50% + 6px); top:120px;
+    width:8px; height:8px; background:#fef08a; opacity:0;
+    box-shadow:0 0 14px rgba(253,224,71,.9);
+    animation:sparkPop 4.4s cubic-bezier(.4,0,.2,1) infinite;
+  }
+  .spark:nth-of-type(2){ animation-delay:.05s; margin-left:-16px; margin-top:10px; background:#fff }
+  .spark:nth-of-type(3){ animation-delay:.09s; margin-left:14px; margin-top:-8px; background:#4ade80 }
+  @keyframes sparkPop{
+    0%,40%{ opacity:0; transform:scale(.4) }
+    44%{ opacity:1; transform:scale(1.5) translate(6px,-8px) }
+    56%{ opacity:0; transform:scale(.5) translate(18px,10px) }
+    100%{ opacity:0 }
+  }
+  .hitflash{
+    position:absolute; inset:0; background:rgba(239,68,68,.16); opacity:0;
+    animation:hitFlash 4.4s cubic-bezier(.4,0,.2,1) infinite;
+  }
+  @keyframes hitFlash{ 0%,41%{opacity:0} 45%{opacity:1} 55%,100%{opacity:0} }
+
+  .hearts i{ display:inline-block; width:11px; height:11px; margin-right:3px; background:#ef4444; clip-path:polygon(50% 100%,0 40%,20% 0,50% 22%,80% 0,100% 40%); }
+  .hearts i.lost{ background:#3f2b2b; animation:heartDrop 4.4s steps(1) infinite; }
+  @keyframes heartDrop{ 0%,44%{ background:#ef4444 } 45%,100%{ background:#3f2b2b } }
+
+  .ground{
+    position:absolute; inset-inline:0; bottom:0; height:64px;
+    background:repeating-linear-gradient(90deg,#1f3b24 0 32px,#25462a 32px 64px);
+    border-top:3px solid #2f5c37;
+  }
+  .ground::after{
+    content:''; position:absolute; inset-inline:0; top:12px; height:52px;
+    background:repeating-linear-gradient(90deg,#5a4632 0 32px,#4d3b2a 32px 64px);
+    opacity:.9;
+  }
+
+  /* ============ MOD SETUP FLOW ============ */
+  .step-line{ position:absolute; left:0; top:0; height:2px; background:linear-gradient(90deg,#4ade80,#10b981); transition:width .5s cubic-bezier(.4,0,.2,1); }
+  .flow-panel{ display:none } .flow-panel.on{ display:block; animation:fadeUp .45s cubic-bezier(.2,.7,.3,1) }
+  .skin-panel{ display:none } .skin-panel.on{ display:block; animation:fadeUp .45s cubic-bezier(.2,.7,.3,1) }
+  @keyframes fadeUp{ from{ opacity:0; transform:translateY(10px) } to{ opacity:1; transform:none } }
+
+  .bar-fill{ transition:width .5s cubic-bezier(.4,0,.2,1) }
+
+
+  /* ---- static ambient wash: no filters, no animation ---- */
+  .ambient{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(760px 420px at 50% -8%, rgba(34,197,94,.13), transparent 68%),
+      radial-gradient(620px 420px at 4% 48%, rgba(16,185,129,.08), transparent 70%),
+      radial-gradient(680px 460px at 100% 96%, rgba(34,197,94,.07), transparent 70%);
+  }
+
+  /* ---- composited pulse (transform+opacity only) ---- */
+  .dot-pulse{ position:relative; }
+  .dot-pulse::after{
+    content:''; position:absolute; inset:-5px; border-radius:50%;
+    border:2px solid rgba(34,197,94,.6);
+    animation:dotPulse 2.6s cubic-bezier(.4,0,.2,1) infinite;
+  }
+  @keyframes dotPulse{
+    0%   { transform:scale(.6); opacity:.9 }
+    70%  { transform:scale(2.1); opacity:0 }
+    100% { transform:scale(2.1); opacity:0 }
+  }
+
+  /* ---- highlight the download card when jumped to ---- */
+  #download:target{ animation:landed 1.6s ease-out 1; }
+  @keyframes landed{
+    0%   { box-shadow:0 0 0 0 rgba(34,197,94,.55) }
+    100% { box-shadow:0 0 0 22px rgba(34,197,94,0) }
+  }
+  #download{ scroll-margin-top:96px; }
+
+  /* ---- pause anything animated while it is off screen ---- */
+  .idle, .idle *{ animation-play-state:paused !important; }
+
+  /* ---- let the browser skip layout/paint for off-screen sections ---- */
+  .cv{ content-visibility:auto; contain-intrinsic-size:auto 900px; }
+
+  .marquee-track{ will-change:transform; }
+
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation:none !important; transition-duration:.01ms !important; }
+    .reveal{ opacity:1; transform:none; }
+    #app{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+
+<body class="bg-obsidian text-slate-300 font-sans">
+
+<!-- ==================== PRELOADER ==================== -->
+<div id="preloader" role="status" aria-live="polite" aria-label="Loading Vesper Launcher">
+  <div class="pl-inner">
+    <div class="pl-logo">
+      <svg viewBox="0 0 128 128" aria-hidden="true">
+        <defs>
+          <linearGradient id="plTileGrad" x1="0" y1="0" x2=".35" y2="1">
+            <stop offset="0" stop-color="#8ed8ab"/><stop offset=".55" stop-color="#63c795"/><stop offset="1" stop-color="#45b47e"/>
+          </linearGradient>
+        </defs>
+        <rect class="pl-tile" width="128" height="128" rx="30" fill="url(#plTileGrad)"/>
+        <path class="pl-fill" d="M64 28 100 64 64 100 28 64Z" fill="#07100c"/>
+        <path class="pl-stroke" d="M64 28 100 64 64 100 28 64Z" />
+      </svg>
+    </div>
+    <div class="pl-blocks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="pl-word">VESPER</div>
+    <div class="pl-bar" aria-hidden="true"><i id="plBar"></i></div>
+    <div class="pl-tip" id="plTip">Warming caches…</div>
+  </div>
+</div>
+
+<!-- Failsafe: independent of the main script, so a JS error elsewhere can never trap the page -->
+<noscript>
+  <style>#preloader{ display:none !important } html.is-loading, html.is-loading body{ overflow:auto !important; height:auto !important } #app{ opacity:1 !important; transform:none !important }</style>
+</noscript>
+<script>
+  setTimeout(function () {
+    var p = document.getElementById('preloader'), a = document.getElementById('app');
+    document.documentElement.classList.remove('is-loading');
+    if (a) a.classList.add('ready');
+    if (p) p.classList.add('done');
+  }, 6000);
+</script>
+
+<!-- ==================== PAGE ==================== -->
+<div id="app">
+
+  <!-- ambient backdrop -->
+  <div class="ambient" aria-hidden="true"></div>
+
+  <!-- ==================== NAV ==================== -->
+  <header class="fixed inset-x-0 top-0 z-50 glass">
+    <nav class="mx-auto flex h-[70px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
+
+      <a href="#top" class="group flex items-center gap-2.5" aria-label="Vesper Launcher — home">
+        <img src="assets/logo.svg" alt="" width="36" height="36" decoding="async"
+             class="h-9 w-9 rounded-[10px] shadow-[0_4px_18px_-5px_rgba(76,195,138,.7)] transition duration-300 group-hover:scale-105" />
+        <span class="text-[19px] font-extrabold tracking-tightest text-white">Vesper</span>
+      </a>
+
+      <div class="hidden items-center gap-9 text-[14.5px] font-semibold text-slate-400 md:flex">
+        <a href="#features" class="relative transition hover:text-white after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-400 after:transition-transform hover:after:scale-x-100">Features</a>
+        <a href="#showcase" class="relative transition hover:text-white after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-400 after:transition-transform hover:after:scale-x-100">Showcase</a>
+        <a href="#platform" class="relative transition hover:text-white after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-400 after:transition-transform hover:after:scale-x-100">Platform</a>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <a href="#showcase" class="tip hidden h-10 w-10 place-items-center rounded-[10px] border border-white/10 bg-white/5 text-slate-400 transition hover:border-emerald-500/40 hover:bg-emerald-500/10 hover:text-emerald-400 sm:grid" data-tip="Watch the motion demo" aria-label="Showcase">
+          <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>
+        </a>
+        <a href="#download" class="group relative inline-flex items-center gap-2 rounded-[11px] bg-gradient-to-b from-emerald-400 via-emerald-500 to-emerald-600 px-[18px] py-2.5 text-[14px] font-bold tracking-tight text-[#04170c] shadow-glow transition hover:-translate-y-0.5 hover:shadow-glow-lg">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Download
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="top" class="relative isolate overflow-hidden pt-[70px]">
+    <div class="absolute inset-0 -z-10" aria-hidden="true">
+      <picture>
+        <source type="image/webp" srcset="assets/world-hero.webp 1100w, assets/world-hero@2x.webp 1920w" sizes="100vw" />
+        <img src="assets/world-hero@2x.webp" width="1920" height="1080" alt="" decoding="async"
+             class="h-full w-full object-cover object-[50%_62%] opacity-[.85]" />
+      </picture>
+      <div class="absolute inset-0 bg-[radial-gradient(900px_520px_at_50%_-6%,rgba(34,197,94,.20),transparent_62%)]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-obsidian/25 via-obsidian/60 to-obsidian"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(760px_420px_at_50%_30%,rgba(9,13,11,.86),transparent_72%)]"></div>
+      <div class="absolute inset-0 pixel-grid [mask-image:radial-gradient(ellipse_72%_58%_at_50%_30%,#000,transparent_78%)]"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-5 pb-24 pt-16 text-center sm:px-8 sm:pt-24">
+
+      <div class="reveal inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-[12.5px] font-semibold text-emerald-300">
+        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 dot-pulse"></span>
+        Modrinth &amp; CurseForge, unified in one search
+      </div>
+
+      <h1 class="reveal mx-auto mt-7 max-w-[16ch] text-[clamp(2.6rem,7.2vw,5.5rem)] font-black leading-[.98] tracking-tightest text-white [text-shadow:0_6px_50px_rgba(0,0,0,.55)]">
+        Your Minecraft worlds,
+        <span class="grad-sheen">without the friction.</span>
+      </h1>
+
+      <p class="reveal mx-auto mt-7 max-w-2xl text-[clamp(1rem,2.1vw,1.2rem)] leading-relaxed text-slate-300/90">
+        Hot launches land in as little as
+        <span class="font-semibold text-emerald-400">13 seconds</span> thanks to a heavily
+        optimized, ultra-lightweight architecture that stays out of your system's way — and every
+        <span class="font-semibold text-white">Modrinth</span> and
+        <span class="font-semibold text-white">CurseForge</span> mod lives in one search,
+        synced through our secure backend.
+      </p>
+
+      <div class="reveal mt-10 flex flex-wrap items-center justify-center gap-3.5">
+        <a id="primaryCta" href="#download"
+           class="group inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-b from-emerald-400 via-emerald-500 to-emerald-600 px-8 py-4 text-[16px] font-bold tracking-tight text-[#04170c] shadow-glow transition hover:-translate-y-0.5 hover:shadow-glow-lg">
+          <svg class="h-[19px] w-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13V7"/><path d="m15 10-3 3-3-3"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>
+          <span class="flex flex-col items-start leading-tight">
+            <span id="primaryCtaLabel">Download now</span>
+            <span id="primaryCtaSub" class="text-[11.5px] font-semibold opacity-70"></span>
+          </span>
+        </a>
+        <a href="#showcase" class="group inline-flex items-center gap-2.5 rounded-xl border border-white/12 bg-white/5 px-8 py-4 text-[16px] font-bold tracking-tight text-white transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10">
+          <svg class="h-[18px] w-[18px] text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg> See it in motion
+        </a>
+      </div>
+
+      <p class="reveal mt-5 text-[12.5px] text-slate-500">
+        Hot launch = relaunching an instance Vesper has already cached. First-time setup downloads assets and takes longer.
+      </p>
+
+      <!-- ===== real launcher screenshot + live hot-launch overlay ===== -->
+      <div class="reveal tilt-wrap mx-auto mt-14 max-w-6xl sm:mt-16">
+        <div id="tiltCard" class="tilt relative">
+          <picture>
+            <source type="image/webp" srcset="assets/instances.webp 1100w, assets/instances@2x.webp 2200w"
+                    sizes="(max-width: 1200px) 100vw, 1152px" />
+            <img src="assets/instances@2x.webp" width="2200" height="1488"
+                 alt="Vesper Launcher showing six Minecraft instances — SinglePlayer, Builder, Skyblock, Redstone, PVP and Terralith — each with last-played time, play time and Play, Edit, Duplicate and Delete actions"
+                 fetchpriority="high" decoding="async"
+                 class="w-full drop-shadow-[0_40px_90px_rgba(0,0,0,.75)]" />
+          </picture>
+
+          <!-- floating hot-launch meter -->
+          <div class="pointer-events-none absolute -bottom-8 left-1/2 w-[min(92%,520px)] -translate-x-1/2 sm:-bottom-10">
+            <div class="glass rounded-2xl px-5 py-4 shadow-[0_20px_50px_-12px_rgba(0,0,0,.85)]">
+              <div class="flex items-center gap-3">
+                <span class="grid h-9 w-9 flex-none place-items-center rounded-lg bg-emerald-500/15 text-emerald-400">
+                  <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+                </span>
+                <div class="min-w-0 flex-1">
+                  <p class="text-[11px] font-extrabold uppercase tracking-[.16em] text-emerald-400" id="launchStage">Hot launch</p>
+                  <p class="truncate text-[13px] font-semibold text-white">SinglePlayer &middot; cached instance</p>
+                </div>
+                <span class="flex-none text-[19px] font-black tabular-nums text-emerald-300" id="launchTimer">0.0s</span>
+              </div>
+              <span class="mt-3 block h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                <i id="launchBar" class="block h-full w-0 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 shadow-[0_0_14px_rgba(34,197,94,.7)]"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE ==================== -->
+  <div class="relative z-10 border-y border-white/8 bg-moss-900/60 py-5">
+    <div class="marquee-mask overflow-hidden">
+      <div class="marquee-track flex w-max animate-marquee gap-10 pr-10 text-[13px] font-semibold text-slate-500">
+        <span class="flex gap-10" id="mqA">
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Fabric</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> NeoForge</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Quilt</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Modrinth</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> CurseForge</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Shader packs</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Resource packs</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Plugins</span>
+        </span>
+        <span class="flex gap-10" aria-hidden="true">
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Fabric</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> NeoForge</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Quilt</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Modrinth</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> CurseForge</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Shader packs</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Resource packs</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-emerald-500/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Plugins</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section id="features" class="cv relative z-10 px-5 py-24 sm:px-8 sm:py-32">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <span class="text-[12px] font-extrabold uppercase tracking-[.22em] text-emerald-400">Features</span>
+        <h2 class="mt-4 text-[clamp(2rem,4.6vw,3.1rem)] font-black leading-[1.05] tracking-tightest text-white">
+          Built light. <span class="grad-text">Runs fast.</span>
+        </h2>
+        <p class="mt-5 text-[17px] leading-relaxed text-slate-400">
+          Vesper strips the launcher down to what matters — then makes that part quick.
+        </p>
+      </div>
+
+      <div class="mt-16 grid gap-5 md:grid-cols-3">
+
+        <article class="spot reveal group relative rounded-2xl border border-white/8 bg-moss-800/60 p-8 transition duration-300 hover:-translate-y-1.5 hover:border-emerald-500/35 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,.8),0_0_50px_-18px_rgba(34,197,94,.45)]">
+          <div class="pixel-corners relative mb-6 grid h-14 w-14 place-items-center rounded-xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/20 to-emerald-600/[.04] text-emerald-400">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"/><rect x="14" y="2" width="8" height="8" rx="1"/></svg>
+          </div>
+          <h3 class="text-[1.28rem] font-extrabold tracking-tight text-white">Unified Ecosystem</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-slate-400">
+            Every mod, modpack, shader, and plugin from Modrinth and CurseForge in a single search —
+            powered by Vesper's backend databases, which keep the index current and filtered to your
+            loader and game version.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[11.5px] font-semibold text-emerald-300">Modrinth</span>
+            <span class="rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[11.5px] font-semibold text-emerald-300">CurseForge</span>
+            <span class="rounded-full border border-white/8 bg-white/5 px-3 py-1 text-[11.5px] font-medium text-slate-500">Backend-indexed</span>
+          </div>
+        </article>
+
+        <article class="spot reveal group relative rounded-2xl border border-white/8 bg-moss-800/60 p-8 transition duration-300 hover:-translate-y-1.5 hover:border-emerald-500/35 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,.8),0_0_50px_-18px_rgba(34,197,94,.45)]">
+          <div class="pixel-corners relative mb-6 grid h-14 w-14 place-items-center rounded-xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/20 to-emerald-600/[.04] text-emerald-400">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg>
+          </div>
+          <h3 class="text-[1.28rem] font-extrabold tracking-tight text-white">Ultra-Lightweight &amp; Smooth</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-slate-400">
+            A heavily optimized architecture with a deliberately small memory footprint. Vesper stays
+            idle in the background instead of competing with the game for RAM and CPU, so your frames
+            go where they belong.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[11.5px] font-semibold text-emerald-300">Low memory</span>
+            <span class="rounded-full border border-white/8 bg-white/5 px-3 py-1 text-[11.5px] font-medium text-slate-500">Resource-friendly</span>
+            <span class="rounded-full border border-white/8 bg-white/5 px-3 py-1 text-[11.5px] font-medium text-slate-500">Isolated instances</span>
+          </div>
+        </article>
+
+        <article class="spot reveal group relative rounded-2xl border border-white/8 bg-moss-800/60 p-8 transition duration-300 hover:-translate-y-1.5 hover:border-emerald-500/35 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,.8),0_0_50px_-18px_rgba(34,197,94,.45)]">
+          <div class="pixel-corners relative mb-6 grid h-14 w-14 place-items-center rounded-xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/20 to-emerald-600/[.04] text-emerald-400">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+          </div>
+          <h3 class="text-[1.28rem] font-extrabold tracking-tight text-white">13-Second Hot Launch</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-slate-400">
+            Relaunching a cached instance can put you back in your server or single-player world in as
+            little as 13 seconds. Assets stay verified on disk, so Vesper skips straight to spinning
+            up the game.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[11.5px] font-semibold text-emerald-300">13s hot launch</span>
+            <span class="rounded-full border border-white/8 bg-white/5 px-3 py-1 text-[11.5px] font-medium text-slate-500">Cached assets</span>
+            <span class="rounded-full border border-white/8 bg-white/5 px-3 py-1 text-[11.5px] font-medium text-slate-500">Straight to world</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MOTION SHOWCASE ==================== -->
+  <section id="showcase" class="cv relative z-10 border-y border-white/8 bg-gradient-to-b from-moss-900 via-moss-800/70 to-moss-900 px-5 py-24 sm:px-8 sm:py-32">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <span class="text-[12px] font-extrabold uppercase tracking-[.22em] text-emerald-400">In motion</span>
+        <h2 class="mt-4 text-[clamp(2rem,4.6vw,3.1rem)] font-black leading-[1.05] tracking-tightest text-white">
+          From menu to <span class="grad-text">mayhem.</span>
+        </h2>
+        <p class="mt-5 text-[17px] leading-relaxed text-slate-400">
+          Set up mods, tune your profile, and drop into the fight — without the launcher ever getting in the way.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-5 lg:grid-cols-2">
+
+        <!-- ===== PvP arena ===== -->
+        <div class="reveal glow-border overflow-hidden rounded-2xl bg-moss-800/80 shadow-card lg:col-span-2">
+          <div class="grid lg:grid-cols-[1.25fr_1fr]">
+
+            <div class="arena bg-gradient-to-b from-[#0d1a26] via-[#12283a] to-[#0e1f18]">
+              <div class="pixel-grid absolute inset-0 opacity-25"></div>
+              <div class="absolute left-[12%] top-6 h-10 w-16 rounded bg-white/10 blur-[1px]"></div>
+              <div class="absolute right-[18%] top-12 h-8 w-24 rounded bg-white/[.07] blur-[1px]"></div>
+
+              <div class="hitflash"></div>
+
+              <!-- health bars -->
+              <div class="absolute left-4 top-4 hearts" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i class="lost"></i>
+              </div>
+              <div class="absolute right-4 top-4 hearts" aria-hidden="true">
+                <i></i><i></i><i class="lost"></i><i class="lost"></i><i class="lost"></i>
+              </div>
+
+              <!-- fighters -->
+              <div class="fighter" id="f1" aria-hidden="true">
+                <div class="head"><span class="eye l"></span><span class="eye r"></span></div>
+                <div class="torso"></div>
+                <span class="arm back"></span>
+                <span class="arm front"></span>
+                <span class="sword"></span>
+                <div class="legs"><span></span><span></span></div>
+              </div>
+
+              <div class="fighter" id="f2" aria-hidden="true">
+                <div class="head"><span class="eye l"></span><span class="eye r"></span></div>
+                <div class="torso"></div>
+                <span class="arm back"></span>
+                <span class="arm front"></span>
+                <span class="shieldblock"></span>
+                <div class="legs"><span></span><span></span></div>
+              </div>
+
+              <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+
+              <div class="ground"></div>
+
+              <div class="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-black/50 px-3 py-1 text-[11px] font-semibold text-slate-400">
+                CSS-animated PvP scene
+              </div>
+            </div>
+
+            <div class="p-7 sm:p-9">
+              <span class="inline-flex items-center gap-1.5 rounded bg-emerald-500 px-2.5 py-1 text-[10.5px] font-extrabold uppercase tracking-[.14em] text-[#04170c]">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" x2="19" y1="19" y2="13"/><line x1="16" x2="20" y1="16" y2="20"/><line x1="19" x2="21" y1="21" y2="19"/><polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"/><line x1="5" x2="9" y1="14" y2="18"/><line x1="7" x2="4" y1="17" y2="20"/><line x1="3" x2="5" y1="19" y2="21"/></svg> PvP ready
+              </span>
+              <h3 class="mt-4 text-2xl font-extrabold tracking-tight text-white">Queue up without the wait</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-slate-400">
+                Your PvP instance stays cached and verified between sessions. Hit Play, watch the
+                13-second hot launch tick down, and land back on the server while the lobby's still
+                filling — no re-downloading, no re-validating, no dead time.
+              </p>
+              <ul class="mt-6 space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-md bg-emerald-500/12 text-emerald-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                  <span class="text-[14.5px] text-slate-300">Per-instance keybinds, resource packs, and server pins</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-md bg-emerald-500/12 text-emerald-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                  <span class="text-[14.5px] text-slate-300">Lightweight footprint leaves headroom for frames</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-md bg-emerald-500/12 text-emerald-400"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                  <span class="text-[14.5px] text-slate-300">Direct-connect straight from the instance card</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== mod setup flow ===== -->
+        <div class="reveal glow-border overflow-hidden rounded-2xl bg-moss-800/80 p-7 shadow-card sm:p-8">
+          <span class="inline-flex items-center gap-1.5 rounded bg-emerald-500 px-2.5 py-1 text-[10.5px] font-extrabold uppercase tracking-[.14em] text-[#04170c]">
+            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></svg> Live mod setup
+          </span>
+          <h3 class="mt-4 text-2xl font-extrabold tracking-tight text-white">Configure mods in real time</h3>
+          <p class="mt-2.5 text-[14.5px] leading-relaxed text-slate-400">
+            Watch a full install play out — search, resolve, download, launch. Click any step to jump to it.
+          </p>
+
+          <!-- step pills -->
+          <div class="relative mt-6">
+            <div class="h-[2px] w-full rounded bg-white/8"></div>
+            <div class="step-line" id="stepLine" style="width:25%"></div>
+          </div>
+          <div class="mt-4 grid grid-cols-4 gap-2" id="stepPills">
+            <button class="flow-step rounded-lg border border-emerald-500/35 bg-emerald-500/12 px-2 py-2 text-[11.5px] font-bold text-emerald-300 transition" data-step="0">Search</button>
+            <button class="flow-step rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-[11.5px] font-bold text-slate-400 transition hover:text-white" data-step="1">Resolve</button>
+            <button class="flow-step rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-[11.5px] font-bold text-slate-400 transition hover:text-white" data-step="2">Prepare</button>
+            <button class="flow-step rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-[11.5px] font-bold text-slate-400 transition hover:text-white" data-step="3">Running</button>
+          </div>
+
+          <div class="mt-4 overflow-hidden rounded-xl">
+            <div class="flow-panel on" data-panel="0">
+              <picture>
+                <source type="image/webp" srcset="assets/mods-search.webp 700w, assets/mods-search@2x.webp 1400w" sizes="(max-width:1024px) 92vw, 560px" />
+                <img src="assets/mods-search.webp" width="700" height="467" loading="lazy" decoding="async"
+                     alt="Unified search across Modrinth and CurseForge, filtered to the instance's loader and game version" class="w-full" />
+              </picture>
+            </div>
+            <div class="flow-panel" data-panel="1">
+              <picture>
+                <source type="image/webp" srcset="assets/dependencies.webp 700w, assets/dependencies@2x.webp 1400w" sizes="(max-width:1024px) 92vw, 560px" />
+                <img src="assets/dependencies.webp" width="700" height="472" loading="lazy" decoding="async"
+                     alt="Vesper's install-dependencies dialog listing the required library it will pull in alongside the mod" class="w-full" />
+              </picture>
+            </div>
+            <div class="flow-panel" data-panel="2">
+              <picture>
+                <source type="image/webp" srcset="assets/launching.webp 700w, assets/launching@2x.webp 1400w" sizes="(max-width:1024px) 92vw, 560px" />
+                <img src="assets/launching.webp" width="700" height="466" loading="lazy" decoding="async"
+                     alt="The launcher preparing an instance, showing asset verification progress" class="w-full" />
+              </picture>
+            </div>
+            <div class="flow-panel" data-panel="3">
+              <picture>
+                <source type="image/webp" srcset="assets/console.webp 700w, assets/console@2x.webp 1400w" sizes="(max-width:1024px) 92vw, 560px" />
+                <img src="assets/console.webp" width="700" height="472" loading="lazy" decoding="async"
+                     alt="The live game console streaming output while the PVP instance runs" class="w-full" />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== skins &amp; profiles (real screenshots) ===== -->
+        <div class="reveal glow-border overflow-hidden rounded-2xl bg-moss-800/80 p-7 shadow-card sm:p-8">
+          <span class="inline-flex items-center gap-1.5 rounded bg-emerald-500 px-2.5 py-1 text-[10.5px] font-extrabold uppercase tracking-[.14em] text-[#04170c]">
+            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg> Skins &amp; profiles
+          </span>
+          <h3 class="mt-4 text-2xl font-extrabold tracking-tight text-white">Swap your look without leaving the launcher</h3>
+          <p class="mt-2.5 text-[14.5px] leading-relaxed text-slate-400">
+            Browse a library of skins, add one to your wardrobe, and apply it to any instance &mdash; with a live
+            preview of how it will render in game.
+          </p>
+
+          <div class="mt-6 flex gap-2" id="skinTabs">
+            <button class="skin-tab is-on rounded-lg border border-emerald-500/35 bg-emerald-500/12 px-4 py-2 text-[12.5px] font-bold text-emerald-300 transition" data-skin="0">My wardrobe</button>
+            <button class="skin-tab rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-[12.5px] font-bold text-slate-400 transition hover:text-white" data-skin="1">Browse skins</button>
+          </div>
+
+          <div class="mt-3 overflow-hidden rounded-xl">
+            <div class="skin-panel on" data-skinpanel="0">
+              <picture>
+                <source type="image/webp" srcset="assets/wardrobe.webp 700w, assets/wardrobe@2x.webp 1400w" sizes="(max-width:1024px) 92vw, 560px" />
+                <img src="assets/wardrobe.webp" width="700" height="466" loading="lazy" decoding="async"
+                     alt="Vesper's Wardrobe tab with a saved skin selected and a live preview of the character model"
+                     class="w-full" />
+              </picture>
+            </div>
+            <div class="skin-panel" data-skinpanel="1">
+              <picture>
+                <source type="image/webp" srcset="assets/skins-browse.webp 700w, assets/skins-browse@2x.webp 1400w" sizes="(max-width:1024px) 92vw, 560px" />
+                <img src="assets/skins-browse.webp" width="700" height="466" loading="lazy" decoding="async"
+                     alt="Vesper's skin browser showing a grid of community skins that can be added to your wardrobe"
+                     class="w-full" />
+              </picture>
+            </div>
+          </div>
+
+          <p class="mt-5 flex items-center gap-2 text-[11.5px] text-slate-500">
+            <svg class="h-3.5 w-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            Profiles and skin selections sync through Vesper's account services.
+          </p>
+        </div>
+
+        <!-- ===== supporting gallery ===== -->
+        <div class="grid gap-5 sm:grid-cols-3 lg:col-span-2">
+          <figure class="reveal group overflow-hidden rounded-2xl bg-moss-800/40">
+            <picture>
+              <source type="image/webp" srcset="assets/home.webp 460w, assets/home@2x.webp 900w" sizes="(max-width:640px) 92vw, 30vw" />
+              <img src="assets/home.webp" width="460" height="307" loading="lazy" decoding="async"
+                   alt="Vesper's home screen with a Welcome back banner and cards explaining isolated instances, automatic Java, account modes and mod sources"
+                   class="w-full transition duration-500 group-hover:scale-[1.03]" />
+            </picture>
+            <figcaption class="px-4 pb-4 pt-1">
+              <p class="text-[13.5px] font-bold text-white">Home</p>
+              <p class="mt-1 text-[12.5px] leading-relaxed text-slate-500">Pick an instance and press Play &mdash; runtimes, libraries and assets are fetched for you.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="reveal group overflow-hidden rounded-2xl bg-moss-800/40">
+            <picture>
+              <source type="image/webp" srcset="assets/accounts.webp 460w, assets/accounts@2x.webp 900w" sizes="(max-width:640px) 92vw, 30vw" />
+              <img src="assets/accounts.webp" width="460" height="305" loading="lazy" decoding="async"
+                   alt="Vesper's accounts screen offering Microsoft sign-in for online servers and offline profiles for singleplayer"
+                   class="w-full transition duration-500 group-hover:scale-[1.03]" />
+            </picture>
+            <figcaption class="px-4 pb-4 pt-1">
+              <p class="text-[13.5px] font-bold text-white">Accounts</p>
+              <p class="mt-1 text-[12.5px] leading-relaxed text-slate-500">Microsoft sign-in for online play, or an offline profile to start immediately.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="reveal group overflow-hidden rounded-2xl bg-moss-800/40">
+            <picture>
+              <source type="image/webp" srcset="assets/settings-memory.webp 460w, assets/settings-memory@2x.webp 900w" sizes="(max-width:640px) 92vw, 30vw" />
+              <img src="assets/settings-memory.webp" width="460" height="305" loading="lazy" decoding="async"
+                   alt="Vesper's per-instance settings with heap size sliders and an automatic Java runtime selector"
+                   class="w-full transition duration-500 group-hover:scale-[1.03]" />
+            </picture>
+            <figcaption class="px-4 pb-4 pt-1">
+              <p class="text-[13.5px] font-bold text-white">Per-instance tuning</p>
+              <p class="mt-1 text-[12.5px] leading-relaxed text-slate-500">Heap size and Java runtime per profile, with sensible defaults already set.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PLATFORM / BACKEND ==================== -->
+  <section id="platform" class="cv relative z-10 px-5 py-24 sm:px-8 sm:py-32">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+
+        <div class="reveal">
+          <span class="text-[12px] font-extrabold uppercase tracking-[.22em] text-emerald-400">Platform</span>
+          <h2 class="mt-4 text-[clamp(2rem,4.4vw,2.9rem)] font-black leading-[1.06] tracking-tightest text-white">
+            A backend doing the <span class="grad-text">heavy lifting.</span>
+          </h2>
+          <p class="mt-5 text-[16.5px] leading-relaxed text-slate-400">
+            The client stays thin because the hard work happens upstream. Vesper relies on secure
+            external databases and high-performance backend services to index both mod platforms,
+            resolve compatibility, and keep your account and profiles in sync across machines —
+            which is exactly why the desktop app can stay this small and this quick.
+          </p>
+
+          <div class="mt-8 grid gap-3 sm:grid-cols-2">
+            <div class="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[.03] p-4">
+              <span class="grid h-10 w-10 flex-none place-items-center rounded-lg bg-emerald-500/12 text-emerald-400"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></span>
+              <div>
+                <p class="text-[14px] font-bold text-white">Unified mod index</p>
+                <p class="mt-0.5 text-[12.5px] leading-relaxed text-slate-500">Modrinth and CurseForge metadata, merged and kept current server-side.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[.03] p-4">
+              <span class="grid h-10 w-10 flex-none place-items-center rounded-lg bg-emerald-500/12 text-emerald-400"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span>
+              <div>
+                <p class="text-[14px] font-bold text-white">Seamless mod syncing</p>
+                <p class="mt-0.5 text-[12.5px] leading-relaxed text-slate-500">Instances and mod sets follow you between machines.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[.03] p-4">
+              <span class="grid h-10 w-10 flex-none place-items-center rounded-lg bg-emerald-500/12 text-emerald-400"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></span>
+              <div>
+                <p class="text-[14px] font-bold text-white">Account services</p>
+                <p class="mt-0.5 text-[12.5px] leading-relaxed text-slate-500">Secure sign-in, profiles, and skin libraries.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[.03] p-4">
+              <span class="grid h-10 w-10 flex-none place-items-center rounded-lg bg-emerald-500/12 text-emerald-400"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
+              <div>
+                <p class="text-[14px] font-bold text-white">Resolution off-device</p>
+                <p class="mt-0.5 text-[12.5px] leading-relaxed text-slate-500">Compatibility math runs server-side, not on your CPU.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-6 text-[12.5px] leading-relaxed text-slate-600">
+            An internet connection is required for search, syncing, and account features. Cached
+            instances still hot launch once they're on disk.
+          </p>
+        </div>
+
+        <!-- download card -->
+        <div id="download" class="reveal glow-border relative overflow-hidden rounded-3xl bg-moss-800/70 p-8 shadow-card sm:p-10">
+          <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/10 via-transparent to-moss-900/80"></div>
+
+          <div class="relative">
+            <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5 text-[12px] font-bold text-emerald-300">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 dot-pulse"></span> <span id="vlBadge">Beta</span>
+            </div>
+            <h3 class="mt-5 text-[1.9rem] font-black leading-tight tracking-tight text-white">Get Vesper</h3>
+            <p class="mt-2.5 text-[15px] leading-relaxed text-slate-400">
+              Install the client, sign in, and your first instance is a few clicks away.
+            </p>
+
+            <div class="mt-7 space-y-2.5" id="vlRows">
+              <a data-rid="win-x64" href="https://github.com/VesperLauncher/Updater/releases/latest" rel="noopener"
+                 class="group flex items-center gap-3.5 rounded-xl border border-white/10 bg-white/[.05] p-4 transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10">
+                <span class="grid h-11 w-11 flex-none place-items-center rounded-lg bg-emerald-500/12 text-emerald-400"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></span>
+                <span class="min-w-0 flex-1"><span class="flex items-center gap-2"><span class="text-[15px] font-bold text-white">Windows</span><span data-rec class="hidden rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">Your system</span></span><span class="block text-[12.5px] text-slate-500" data-sub>.zip &middot; x64</span></span>
+                <svg class="h-4 w-4 flex-none text-slate-600 transition group-hover:translate-x-1 group-hover:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a data-rid="osx-arm64" href="https://github.com/VesperLauncher/Updater/releases/latest" rel="noopener"
+                 class="group flex items-center gap-3.5 rounded-xl border border-white/10 bg-white/[.05] p-4 transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10">
+                <span class="grid h-11 w-11 flex-none place-items-center rounded-lg bg-emerald-500/12 text-emerald-400"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.528V3a1 1 0 0 1 1-1h0"/><path d="M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21"/></svg></span>
+                <span class="min-w-0 flex-1"><span class="flex items-center gap-2"><span class="text-[15px] font-bold text-white">macOS · Apple Silicon</span><span data-rec class="hidden rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">Your system</span></span><span class="block text-[12.5px] text-slate-500" data-sub>.zip &middot; arm64</span></span>
+                <svg class="h-4 w-4 flex-none text-slate-600 transition group-hover:translate-x-1 group-hover:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a data-rid="osx-x64" href="https://github.com/VesperLauncher/Updater/releases/latest" rel="noopener"
+                 class="group flex items-center gap-3.5 rounded-xl border border-white/10 bg-white/[.05] p-4 transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10">
+                <span class="grid h-11 w-11 flex-none place-items-center rounded-lg bg-emerald-500/12 text-emerald-400"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.528V3a1 1 0 0 1 1-1h0"/><path d="M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21"/></svg></span>
+                <span class="min-w-0 flex-1"><span class="flex items-center gap-2"><span class="text-[15px] font-bold text-white">macOS · Intel</span><span data-rec class="hidden rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">Your system</span></span><span class="block text-[12.5px] text-slate-500" data-sub>.zip &middot; x64</span></span>
+                <svg class="h-4 w-4 flex-none text-slate-600 transition group-hover:translate-x-1 group-hover:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a data-rid="linux-x64" href="https://github.com/VesperLauncher/Updater/releases/latest" rel="noopener"
+                 class="group flex items-center gap-3.5 rounded-xl border border-white/10 bg-white/[.05] p-4 transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10">
+                <span class="grid h-11 w-11 flex-none place-items-center rounded-lg bg-emerald-500/12 text-emerald-400"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19h8"/><path d="m4 17 6-6-6-6"/></svg></span>
+                <span class="min-w-0 flex-1"><span class="flex items-center gap-2"><span class="text-[15px] font-bold text-white">Linux</span><span data-rec class="hidden rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">Your system</span></span><span class="block text-[12.5px] text-slate-500" data-sub>.tar.gz &middot; x64</span></span>
+                <svg class="h-4 w-4 flex-none text-slate-600 transition group-hover:translate-x-1 group-hover:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <p class="mt-5 flex items-start gap-2 text-[12px] leading-relaxed text-slate-500">
+              <svg class="mt-0.5 h-3.5 w-3.5 flex-none text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.2 8-9.5V5.6L12 2.5 4 5.6v6.9C4 18.8 12 22 12 22z"/><path d="m9.2 12.2 2 2 3.6-3.9"/></svg>
+              <span>Every build ships with a published SHA-256 checksum. Vesper is in <strong class="text-slate-400">beta</strong> and the builds are not yet code-signed &mdash; on macOS right-click the app &rarr; <strong class="text-slate-400">Open</strong>, on Windows choose <strong class="text-slate-400">More info &rarr; Run anyway</strong>.</span>
+            </p>
+            <p class="mt-3 text-[12px] text-slate-600"><a id="vlNotes" href="https://github.com/VesperLauncher/Updater/releases/latest" rel="noopener" class="transition hover:text-emerald-400">Release notes &amp; checksums &rarr;</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="relative z-10 border-t border-white/8 bg-moss-900/80 px-5 pb-10 pt-16 sm:px-8">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="flex flex-wrap justify-between gap-12 border-b border-white/8 pb-10">
+        <div class="max-w-sm">
+          <a href="#top" class="flex items-center gap-2.5" aria-label="Vesper Launcher — home">
+            <img src="assets/logo.svg" alt="" width="36" height="36" loading="lazy" decoding="async" class="h-9 w-9 rounded-[10px]" />
+          <span class="text-[19px] font-extrabold tracking-tightest text-white">Vesper</span>
+          </a>
+          <p class="mt-4 text-[14px] leading-relaxed text-slate-500">
+            A blazing-fast, lightweight Minecraft launcher with unified Modrinth and CurseForge
+            integration and 13-second hot launches.
+          </p>
+          <div class="mt-6 flex gap-2.5">
+            <a data-vl="discord" href="https://discord.gg/axj2tBk6dU" target="_blank" rel="noopener noreferrer" class="tip grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[.04] text-slate-400 transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10 hover:text-emerald-400" data-tip="Discord" aria-label="Discord">
+              <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+            </a>
+            <a href="#" rel="noopener" class="tip grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[.04] text-slate-400 transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10 hover:text-emerald-400" data-tip="X / Twitter" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-[17px] w-[17px]" aria-hidden="true"><path d="M18.9 2H22l-6.85 7.83L23.2 22h-6.3l-4.93-6.44L6.32 22H3.2l7.33-8.38L2.4 2h6.46l4.46 5.9L18.9 2Zm-1.1 18.1h1.73L8.3 3.8H6.45L17.8 20.1Z"/></svg>
+            </a>
+            <a href="#" rel="noopener" class="tip grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[.04] text-slate-400 transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10 hover:text-emerald-400" data-tip="YouTube" aria-label="YouTube">
+              <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>
+            </a>
+            <a href="#" rel="noopener" class="tip grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[.04] text-slate-400 transition hover:-translate-y-0.5 hover:border-emerald-500/40 hover:bg-emerald-500/10 hover:text-emerald-400" data-tip="Blog / RSS" aria-label="Blog">
+              <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-x-14 gap-y-10">
+          <div>
+            <h4 class="mb-4 text-[11.5px] font-extrabold uppercase tracking-[.16em] text-white">Product</h4>
+            <ul class="space-y-2.5 text-[14px] text-slate-500">
+              <li><a href="#features" class="transition hover:text-emerald-400">Features</a></li>
+              <li><a href="#showcase" class="transition hover:text-emerald-400">Showcase</a></li>
+              <li><a href="#platform" class="transition hover:text-emerald-400">Platform</a></li>
+              <li><a href="#download" class="transition hover:text-emerald-400">Download</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mb-4 text-[11.5px] font-extrabold uppercase tracking-[.16em] text-white">Support</h4>
+            <ul class="space-y-2.5 text-[14px] text-slate-500">
+              <li><a data-vl="discord" href="https://discord.gg/axj2tBk6dU" target="_blank" rel="noopener noreferrer" class="transition hover:text-emerald-400">Discord server</a></li>
+              <li><a href="https://github.com/VesperLauncher/Updater" rel="noopener" class="transition hover:text-emerald-400">GitHub</a></li>
+              <li><a href="#" rel="noopener" class="transition hover:text-emerald-400">Contact</a></li>
+              <li><a href="https://github.com/VesperLauncher/Updater/issues" rel="noopener" class="transition hover:text-emerald-400">Report an issue</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mb-4 text-[11.5px] font-extrabold uppercase tracking-[.16em] text-white">Legal</h4>
+            <ul class="space-y-2.5 text-[14px] text-slate-500">
+              <li><a href="#" rel="noopener" class="transition hover:text-emerald-400">Terms of Service</a></li>
+              <li><a href="#" rel="noopener" class="transition hover:text-emerald-400">Privacy Policy</a></li>
+              <li><a href="#" rel="noopener" class="transition hover:text-emerald-400">Acceptable Use</a></li>
+              <li><a href="#" rel="noopener" class="transition hover:text-emerald-400">Cookie Notice</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-start justify-between gap-6 pt-8 text-[12.5px] text-slate-600">
+        <div>
+          <p>© <span id="year">2026</span> Vesper Launcher. All rights reserved.</p>
+        </div>
+        <p class="max-w-3xl rounded-xl border border-white/8 bg-white/[.02] p-3.5 leading-relaxed">
+          <span class="font-bold text-slate-500">Independent project disclaimer:</span> Vesper is an
+          independent project and is <span class="font-bold text-slate-500">not affiliated with,
+          endorsed by, sponsored by, or associated with Mojang Studios or Microsoft</span>. Minecraft
+          is a trademark of Mojang Studios. All other trademarks are the property of their respective
+          owners.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /#app -->
+
+<script>
+(function () {
+  'use strict';
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ================= PRELOADER ================= */
+  (function () {
+    var pre  = document.getElementById('preloader');
+    var bar  = document.getElementById('plBar');
+    var tip  = document.getElementById('plTip');
+    var app  = document.getElementById('app');
+    if (!pre) return;
+
+    var tips = ['Warming caches…', 'Indexing mods…', 'Verifying assets…', 'Ready'];
+    var pct = 0, ti = 0, finished = false;
+
+    var tick = setInterval(function () {
+      pct = Math.min(96, pct + (8 + Math.random() * 14));
+      if (bar) bar.style.width = pct + '%';
+      if (tip && ti < tips.length - 1 && pct > (ti + 1) * 26) tip.textContent = tips[++ti];
+    }, 210);
+
+    function finish() {
+      if (finished) return;
+      finished = true;
+      clearInterval(tick);
+      if (bar) bar.style.width = '100%';
+      if (tip) tip.textContent = 'Ready';
+      setTimeout(function () {
+        pre.classList.add('done');
+        document.documentElement.classList.remove('is-loading');
+        if (app) app.classList.add('ready');
+        setTimeout(function () { pre.remove(); }, 850);
+        startReveal();
+      }, reduced ? 60 : 380);
+    }
+
+    // minimum on-screen time so the animation reads, plus a hard failsafe
+    var minTime = reduced ? 300 : 1500;
+    var started = Date.now();
+
+    function onReady() {
+      var wait = Math.max(0, minTime - (Date.now() - started));
+      setTimeout(finish, wait);
+    }
+
+    if (document.readyState === 'complete') onReady();
+    else window.addEventListener('load', onReady);
+
+    // never trap the page, even if an asset hangs
+    setTimeout(finish, 5000);
+  })();
+
+  /* ================= REVEAL ================= */
+  var revealStarted = false;
+  function startReveal() {
+    if (revealStarted) return;
+    revealStarted = true;
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      Array.prototype.forEach.call(els, function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (!entry.isIntersecting) return;
+        entry.target.style.transitionDelay = Math.min(i * 80, 320) + 'ms';
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+  }
+
+  /* ================= HOT LAUNCH METER ================= */
+  (function () {
+    var bar = document.getElementById('launchBar');
+    var out = document.getElementById('launchTimer');
+    var stage = document.getElementById('launchStage');
+    if (!bar || !out) return;
+
+    var TOTAL = 13000, STEP = 130;          // 13s, ~8 updates/sec instead of 60
+    var stages = [
+      [0.00, 'Hot launch \u00b7 starting'],
+      [0.18, 'Hot launch \u00b7 cached assets verified'],
+      [0.46, 'Hot launch \u00b7 injecting mods'],
+      [0.74, 'Hot launch \u00b7 opening window'],
+      [0.97, 'Hot launch \u00b7 in world']
+    ];
+
+    function paint(p) {
+      bar.style.transform = 'scaleX(' + p.toFixed(3) + ')';
+      out.textContent = (p * 13).toFixed(1) + 's';
+      if (!stage) return;
+      for (var i = stages.length - 1; i >= 0; i--) {
+        if (p >= stages[i][0]) { stage.textContent = stages[i][1]; break; }
+      }
+    }
+
+    bar.style.width = '100%';
+    bar.style.transformOrigin = 'left';
+
+    if (reduced) { paint(1); return; }
+
+    var t = 0, timer = null, visible = true;
+
+    function tick() {
+      if (!visible) return;
+      t += STEP;
+      var p = (t % (TOTAL + 1600)) / TOTAL;
+      paint(p > 1 ? 1 : p);
+    }
+    function start() { if (!timer) timer = setInterval(tick, STEP); }
+    function stop() { clearInterval(timer); timer = null; }
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) {
+        visible = e[0].isIntersecting;
+        if (visible) start(); else stop();
+      }, { threshold: 0 }).observe(bar);
+    } else { start(); }
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stop(); else if (visible) start();
+    });
+  })();
+
+  /* ============ pause off-screen animation ============ */
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var targets = document.querySelectorAll('.marquee-track, .arena');
+    if (!targets.length) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        e.target.classList.toggle('idle', !e.isIntersecting);
+      });
+    }, { rootMargin: '120px' });
+    Array.prototype.forEach.call(targets, function (t) {
+      t.classList.add('idle');
+      io.observe(t);
+    });
+  })();
+
+  /* ================= DOWNLOADS (live from version.json) =================
+     The release filenames contain the version number, so nothing here is
+     hardcoded: this reads the SAME manifest the launcher's own updater reads.
+     Cut a release, CI rewrites version.json, these buttons follow. No site edit.
+
+     >>> Paste the Discord invite here and every Discord link on the page updates.
+  ====================================================================== */
+  var VESPER = {
+    manifest: 'https://raw.githubusercontent.com/VesperLauncher/Updater/main/version.json',
+    releases: 'https://github.com/VesperLauncher/Updater/releases/latest',
+    discord:  'https://discord.gg/axj2tBk6dU'
+  };
+
+  /* ---- Discord: one constant drives every link ---- */
+  (function () {
+    if (!VESPER.discord) return;
+    Array.prototype.forEach.call(document.querySelectorAll('[data-vl="discord"]'), function (a) {
+      a.href = VESPER.discord;
+      a.setAttribute('target', '_blank');
+    });
+  })();
+
+  /* ---- platform labels ---- */
+  var PLATFORMS = {
+    'win-x64':   { label: 'Windows',   note: 'x64' },
+    'osx-arm64': { label: 'Mac',       note: 'Apple Silicon' },
+    'osx-x64':   { label: 'Mac',       note: 'Intel' },
+    'linux-x64': { label: 'Linux',     note: 'x64' }
+  };
+
+  function mb(bytes) { return Math.round(bytes / 1048576) + ' MB'; }
+
+  function guessRid(plats) {
+    var ua = navigator.userAgent || '';
+    if (/Windows/i.test(ua)) return 'win-x64';
+    if (/Linux|X11/i.test(ua) && !/Android/i.test(ua)) return 'linux-x64';
+    if (/Mac OS X|Macintosh/i.test(ua)) {
+      // A browser cannot tell Apple Silicon from Intel. UA-CH exposes it on
+      // Chromium; elsewhere assume Apple Silicon and keep the Intel build
+      // one click away in the list below.
+      var d = navigator.userAgentData;
+      if (d && d.platform === 'macOS' && /arm/i.test(d.architecture || '')) return 'osx-arm64';
+      return 'osx-arm64';
+    }
+    return plats['win-x64'] ? 'win-x64' : Object.keys(plats)[0];
+  }
+
+  (function () {
+    var sub   = document.getElementById('primaryCtaSub');
+    var badge = document.getElementById('vlBadge');
+    var notes = document.getElementById('vlNotes');
+    var rows  = document.querySelectorAll('[data-rid]');
+
+    fetch(VESPER.manifest, { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (data) {
+        var plats = data.platforms || {};
+        var version = data.version || '';
+        var mine = guessRid(plats);
+
+        Array.prototype.forEach.call(rows, function (a) {
+          var rid = a.getAttribute('data-rid');
+          var p = plats[rid];
+          if (!p) { a.style.display = 'none'; return; }
+
+          a.href = p.url;
+
+          var s2 = a.querySelector('[data-sub]');
+          if (s2 && p.size) {
+            var ext = (p.filename || '').replace(/^.*?(\.(zip|tar\.gz|exe|dmg|AppImage|deb))$/i, '$1');
+            s2.innerHTML = (ext || '') + ' · ' + mb(p.size);
+          }
+
+          // flag the visitor's platform so the chooser still feels guided
+          if (rid === mine) {
+            var chip = a.querySelector('[data-rec]');
+            if (chip) chip.classList.remove('hidden');
+            a.className += ' border-emerald-500/40 bg-emerald-500/[.08]';
+          }
+        });
+
+        // the headline button just scrolls here, so it only carries the version
+        if (sub) sub.textContent = 'v' + version + ' · Windows, macOS, Linux';
+        if (badge) badge.textContent = 'Beta · v' + version;
+        if (notes && data.releaseNotesUrl) notes.href = data.releaseNotesUrl;
+      })
+      .catch(function () {
+        // Manifest unreachable: rows already point at the releases page and the
+        // headline button is an on-page anchor, so nothing here can go dead.
+        if (sub) sub.textContent = 'Windows, macOS, Linux';
+      });
+  })();
+
+  /* ================= SPOTLIGHT ================= */
+  Array.prototype.forEach.call(document.querySelectorAll('.spot'), function (card) {
+    card.addEventListener('pointermove', function (e) {
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
+
+  /* ================= TILT ================= */
+  (function () {
+    var card = document.getElementById('tiltCard');
+    if (!card || reduced) return;
+    if (window.matchMedia('(hover: none)').matches) return;
+    var queued = false;
+    card.addEventListener('pointermove', function (e) {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () {
+        queued = false;
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = 'rotateX(' + (-py * 5).toFixed(2) + 'deg) rotateY(' + (px * 6).toFixed(2) + 'deg)';
+      });
+    });
+    card.addEventListener('pointerleave', function () {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  })();
+
+  /* ================= MOD SETUP FLOW ================= */
+  (function () {
+    var pills  = document.querySelectorAll('.flow-step');
+    var panels = document.querySelectorAll('.flow-panel');
+    var line   = document.getElementById('stepLine');
+    if (!pills.length) return;
+
+    var ON  = ['border-emerald-500/35', 'bg-emerald-500/12', 'text-emerald-300'];
+    var OFF = ['border-white/10', 'bg-white/5', 'text-slate-400'];
+    var current = 0, timer = null;
+
+    function go(n) {
+      current = n;
+      Array.prototype.forEach.call(pills, function (p, i) {
+        var on = i === n;
+        p.classList.remove.apply(p.classList, on ? OFF : ON);
+        p.classList.add.apply(p.classList, on ? ON : OFF);
+      });
+      Array.prototype.forEach.call(panels, function (p) {
+        p.classList.toggle('on', p.getAttribute('data-panel') === String(n));
+      });
+      if (line) line.style.width = ((n + 1) * 25) + '%';
+    }
+
+    function auto() {
+      if (reduced) return;
+      clearInterval(timer);
+      timer = setInterval(function () { go((current + 1) % pills.length); }, 3200);
+    }
+
+    Array.prototype.forEach.call(pills, function (p) {
+      p.addEventListener('click', function () {
+        go(parseInt(p.getAttribute('data-step'), 10));
+        auto();
+      });
+    });
+
+    go(0);
+    auto();
+  })();
+
+  /* ================= SKIN / WARDROBE TABS ================= */
+  (function () {
+    var tabs = document.querySelectorAll('.skin-tab');
+    var panels = document.querySelectorAll('.skin-panel');
+    if (!tabs.length) return;
+    var ON  = ['border-emerald-500/35', 'bg-emerald-500/12', 'text-emerald-300', 'is-on'];
+    var OFF = ['border-white/10', 'bg-white/5', 'text-slate-400'];
+    Array.prototype.forEach.call(tabs, function (tab) {
+      tab.addEventListener('click', function () {
+        Array.prototype.forEach.call(tabs, function (t) {
+          t.classList.remove.apply(t.classList, ON);
+          t.classList.add.apply(t.classList, OFF);
+        });
+        tab.classList.remove.apply(tab.classList, OFF);
+        tab.classList.add.apply(tab.classList, ON);
+        var want = tab.getAttribute('data-skin');
+        Array.prototype.forEach.call(panels, function (p) {
+          p.classList.toggle('on', p.getAttribute('data-skinpanel') === want);
+        });
+      });
+    });
+  })();
+
+  // if the preloader was skipped for any reason, still reveal content
+  setTimeout(startReveal, 5200);
+})();
+</script>
+
+</body>
+</html>

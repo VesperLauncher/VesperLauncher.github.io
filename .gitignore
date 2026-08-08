@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Unedited screenshot originals — these still contain the real username and
+# local file paths that were redacted from the published images. Keep local.
+Images for Website/
+
+# build scratch (see tools/build-css.sh)
+tools/.scan.html
+tools/.out.css
