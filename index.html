@@ -1131,20 +1131,26 @@
     });
   })();
 
-  /* ================= DOWNLOADS (live from version.json) =================
-     The release filenames contain the version number, so nothing here is
-     hardcoded: this reads the SAME manifest the launcher's own updater reads.
-     Cut a release, CI rewrites version.json, these buttons follow. No site edit.
+  /* ================= DOWNLOADS (live) =================
+     Release filenames contain the version, so nothing is hardcoded.
 
-     >>> Paste the Discord invite here and every Discord link on the page updates.
-  ====================================================================== */
+     Primary source is the GitHub Releases API: it sets proper CORS headers and
+     its asset sizes are the real ones. version.json is the fallback -- it is
+     served through a cache that does not Vary on Origin, so browser requests
+     to it intermittently come back without the CORS header.
+
+     Both can fail; every link's static href already points at the releases
+     page, so the buttons can never go dead.
+
+     >>> Paste the Discord invite here and every Discord link updates.
+  ==================================================== */
   var VESPER = {
+    api:      'https://api.github.com/repos/VesperLauncher/Updater/releases/latest',
     manifest: 'https://raw.githubusercontent.com/VesperLauncher/Updater/main/version.json',
     releases: 'https://github.com/VesperLauncher/Updater/releases/latest',
     discord:  'https://discord.gg/axj2tBk6dU'
   };
 
-  /* ---- Discord: one constant drives every link ---- */
   (function () {
     if (!VESPER.discord) return;
     Array.prototype.forEach.call(document.querySelectorAll('[data-vl="discord"]'), function (a) {
@@ -1153,29 +1159,22 @@
     });
   })();
 
-  /* ---- platform labels ---- */
-  var PLATFORMS = {
-    'win-x64':   { label: 'Windows',   note: 'x64' },
-    'osx-arm64': { label: 'Mac',       note: 'Apple Silicon' },
-    'osx-x64':   { label: 'Mac',       note: 'Intel' },
-    'linux-x64': { label: 'Linux',     note: 'x64' }
-  };
+  var RIDS = ['win-x64', 'osx-arm64', 'osx-x64', 'linux-x64'];
 
   function mb(bytes) { return Math.round(bytes / 1048576) + ' MB'; }
 
-  function guessRid(plats) {
+  function guessRid() {
     var ua = navigator.userAgent || '';
     if (/Windows/i.test(ua)) return 'win-x64';
     if (/Linux|X11/i.test(ua) && !/Android/i.test(ua)) return 'linux-x64';
     if (/Mac OS X|Macintosh/i.test(ua)) {
-      // A browser cannot tell Apple Silicon from Intel. UA-CH exposes it on
-      // Chromium; elsewhere assume Apple Silicon and keep the Intel build
-      // one click away in the list below.
+      // A browser cannot tell Apple Silicon from Intel; UA-CH exposes it on
+      // Chromium. Otherwise assume Apple Silicon, with Intel one click away.
       var d = navigator.userAgentData;
-      if (d && d.platform === 'macOS' && /arm/i.test(d.architecture || '')) return 'osx-arm64';
+      if (d && /arm/i.test(d.architecture || '')) return 'osx-arm64';
       return 'osx-arm64';
     }
-    return plats['win-x64'] ? 'win-x64' : Object.keys(plats)[0];
+    return 'win-x64';
   }
 
   (function () {
@@ -1184,42 +1183,70 @@
     var notes = document.getElementById('vlNotes');
     var rows  = document.querySelectorAll('[data-rid]');
 
-    fetch(VESPER.manifest, { cache: 'no-store' })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (data) {
-        var plats = data.platforms || {};
-        var version = data.version || '';
-        var mine = guessRid(plats);
+    function paint(builds, version, notesUrl) {
+      var mine = guessRid();
 
-        Array.prototype.forEach.call(rows, function (a) {
-          var rid = a.getAttribute('data-rid');
-          var p = plats[rid];
-          if (!p) { a.style.display = 'none'; return; }
+      Array.prototype.forEach.call(rows, function (a) {
+        var rid = a.getAttribute('data-rid');
+        var b = builds[rid];
+        if (!b) { a.style.display = 'none'; return; }
 
-          a.href = p.url;
+        a.href = b.url;
 
-          var s2 = a.querySelector('[data-sub]');
-          if (s2 && p.size) {
-            var ext = (p.filename || '').replace(/^.*?(\.(zip|tar\.gz|exe|dmg|AppImage|deb))$/i, '$1');
-            s2.innerHTML = (ext || '') + ' · ' + mb(p.size);
-          }
+        var s2 = a.querySelector('[data-sub]');
+        if (s2 && b.size) {
+          var ext = (b.name || '').replace(/^.*?(\.(zip|tar\.gz|exe|dmg|AppImage|deb))$/i, '$1');
+          s2.innerHTML = (ext || '') + ' · ' + mb(b.size);
+        }
 
-          // flag the visitor's platform so the chooser still feels guided
-          if (rid === mine) {
-            var chip = a.querySelector('[data-rec]');
-            if (chip) chip.classList.remove('hidden');
-            a.className += ' border-emerald-500/40 bg-emerald-500/[.08]';
-          }
+        if (rid === mine) {
+          var chip = a.querySelector('[data-rec]');
+          if (chip) chip.classList.remove('hidden');
+          a.className += ' border-emerald-500/40 bg-emerald-500/[.08]';
+        }
+      });
+
+      if (sub && version)   sub.textContent = 'v' + version + ' · Windows, macOS, Linux';
+      if (badge && version) badge.textContent = 'Beta · v' + version;
+      if (notes && notesUrl) notes.href = notesUrl;
+    }
+
+    function fromApi() {
+      return fetch(VESPER.api, { headers: { Accept: 'application/vnd.github+json' } })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          var builds = {};
+          (d.assets || []).forEach(function (a) {
+            RIDS.forEach(function (rid) {
+              if (a.name && a.name.indexOf(rid) !== -1) {
+                builds[rid] = { url: a.browser_download_url, size: a.size, name: a.name };
+              }
+            });
+          });
+          if (!Object.keys(builds).length) throw new Error('no assets');
+          paint(builds, (d.tag_name || '').replace(/^v/, ''), d.html_url);
         });
+    }
 
-        // the headline button just scrolls here, so it only carries the version
-        if (sub) sub.textContent = 'v' + version + ' · Windows, macOS, Linux';
-        if (badge) badge.textContent = 'Beta · v' + version;
-        if (notes && data.releaseNotesUrl) notes.href = data.releaseNotesUrl;
-      })
+    function fromManifest() {
+      return fetch(VESPER.manifest, { cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          var plats = d.platforms || {}, builds = {};
+          RIDS.forEach(function (rid) {
+            if (plats[rid]) {
+              builds[rid] = { url: plats[rid].url, size: plats[rid].size, name: plats[rid].filename };
+            }
+          });
+          if (!Object.keys(builds).length) throw new Error('no platforms');
+          paint(builds, d.version || '', d.releaseNotesUrl);
+        });
+    }
+
+    fromApi()
+      .catch(fromManifest)
       .catch(function () {
-        // Manifest unreachable: rows already point at the releases page and the
-        // headline button is an on-page anchor, so nothing here can go dead.
+        // Both sources unreachable. Rows already point at the releases page.
         if (sub) sub.textContent = 'Windows, macOS, Linux';
       });
   })();
